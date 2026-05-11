@@ -1,0 +1,7 @@
+INFO - 2026-04-16 08:00:01 - System started
+WARNING - 2026-04-16 08:01:22 - Low disk space
+ERROR - 2026-04-16 08:02:33 - Failed to load configuration
+INFO - 2026-04-16 08:05:10 - User login successful
+WARNING - 2026-04-16 08:12:45 - High memory usage
+ERROR - 2026-04-16 08:15:50 - Unable to write file
+INFO - 2026-04-16 08:20:00 - Backup completed

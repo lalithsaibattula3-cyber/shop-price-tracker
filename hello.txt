@@ -1,0 +1,3 @@
+hello this is my first file to create in vs code 
+ this is lalith sai 
+ monday , tuesday , wednesday , thursday, friday,saturday,sunday

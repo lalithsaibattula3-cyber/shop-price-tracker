@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Bill</title>
+</head>
+<body>
+
+    <h2>Add Bill</h2>
+
+    <form action="/add" method="post">
+
+        <label>Item Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Total Price:</label><br>
+        <input type="number" name="price" required><br><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" step="any" name="quantity" required><br><br>
+
+        <label>Unit:</label><br>
+        <select name="unit">
+            <option value="kg">kg</option>
+            <option value="litre">litre</option>
+            <option value="pkt">packet</option>
+            <option value="box">box</option>
+            <option value="tin">tin</option>
+        </select><br><br>
+
+        <button type="submit">Add Bill</button>
+
+    </form>
+
+</body>
+</html>

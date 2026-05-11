@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🛒 Shop Price Tracker</h1>
+
+    <h2>Search Item</h2>
+
+    <form action="/dashboard" method="POST">
+
+        <input
+        type="hidden"
+        name="action"
+        value="search">
+
+        <input
+        type="text"
+        name="search_name"
+        placeholder="Search item name"
+        required>
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+    <br>
+
+    <h2>Add Bill</h2>
+
+    <form action="/dashboard" method="POST">
+
+        <input
+        type="hidden"
+        name="action"
+        value="add">
+
+        <input
+        type="text"
+        name="name"
+        placeholder="Item Name"
+        required>
+
+        <input
+        type="number"
+        name="price"
+        placeholder="Total Price"
+        required>
+
+        <input
+        type="number"
+        step="0.01"
+        name="quantity"
+        placeholder="Quantity"
+        required>
+
+        <select name="unit">
+            <option>kg</option>
+            <option>grams</option>
+            <option>litre</option>
+            <option>packet</option>
+        </select>
+
+        <button type="submit">
+            Add Item
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+
+{% if result %}
+
+    <div class="result-box">
+
+        {% if result is string %}
+
+            <h3>{{ result }}</h3>
+
+        {% else %}
+
+            <h3>Latest Price</h3>
+
+            <p>
+                Total Price:
+                ₹{{ result.total }}
+            </p>
+
+            <p>
+                Price Per Unit:
+                ₹{{ result.ppu }}
+                / {{ result.unit }}
+            </p>
+
+            <p>
+                Date:
+                {{ result.date }}
+            </p>
+
+        {% endif %}
+
+    </div>
+
+{% endif %}
